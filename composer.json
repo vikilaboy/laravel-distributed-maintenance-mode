@@ -1,0 +1,42 @@
+{
+    "name": "vikilaboy/laravel-distributed-maintenance-mode",
+    "description": "Offers Laravel applications the ability to store the maintenance mode information on Redis or S3. Forked from despark/laravel-distributed-maintenance-mode",
+    "keywords": [
+        "framework",
+        "laravel",
+        "maintenance"
+    ],
+    "authors": [
+        {
+            "name": "Anton Geshev",
+            "email": "ageshev@despark.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Victor Niculae aka El Niño",
+            "role": "Developer"
+        }
+    ],
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0",
+        "predis/predis": ">=2.0.3",
+        "league/flysystem-aws-s3-v3": "^3.0",
+        "ext-redis": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vikilaboy\\DistributedMaintenanceMode\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vikilaboy\\DistributedMaintenanceMode\\Providers\\DistributedMaintenanceModeServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
