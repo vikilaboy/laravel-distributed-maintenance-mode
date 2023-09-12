@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Despark\DistributedMaintenanceMode\Exceptions;
+namespace Vikilaboy\DistributedMaintenanceMode\Exceptions;
 
 use Exception;
 

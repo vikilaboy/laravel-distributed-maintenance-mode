@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Despark\DistributedMaintenanceMode\Drivers;
+namespace Vikilaboy\DistributedMaintenanceMode\Drivers;
 
 use Illuminate\Contracts\Foundation\MaintenanceMode;
 use Predis\Client;

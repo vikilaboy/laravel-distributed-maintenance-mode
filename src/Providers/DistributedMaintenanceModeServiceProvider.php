@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Despark\DistributedMaintenanceMode\Providers;
+namespace Vikilaboy\DistributedMaintenanceMode\Providers;
 
 use Despark\DistributedMaintenanceMode\Drivers\RedisDriver;
 use Despark\DistributedMaintenanceMode\Drivers\S3Driver;
