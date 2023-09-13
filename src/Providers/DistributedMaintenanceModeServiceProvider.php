@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Vikilaboy\DistributedMaintenanceMode\Providers;
 
-use Despark\DistributedMaintenanceMode\Drivers\RedisDriver;
-use Despark\DistributedMaintenanceMode\Drivers\S3Driver;
-use Despark\DistributedMaintenanceMode\Exceptions\DriverNotFound;
+use Vikilaboy\DistributedMaintenanceMode\Drivers\RedisDriver;
+use Vikilaboy\DistributedMaintenanceMode\Drivers\S3Driver;
+use Vikilaboy\DistributedMaintenanceMode\Exceptions\DriverNotFound;
 use Illuminate\Config\Repository;
 use Illuminate\Container\Container;
 use Illuminate\Filesystem\FilesystemManager;
