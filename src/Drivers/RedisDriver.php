@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Vikilaboy\DistributedMaintenanceMode\Drivers;
 
 use Illuminate\Contracts\Foundation\MaintenanceMode;
-use Predis\Client;
+use Redis;
 
 class RedisDriver implements MaintenanceMode
 {
     private const CACHE_KEY = 'maintenance-mode';
 
-    public function __construct(private readonly Client $redisClient)
+    public function __construct(private readonly Redis $redisClient)
     {
     }
 
@@ -58,6 +58,12 @@ class RedisDriver implements MaintenanceMode
      */
     private function getData(): ?string
     {
-        return $this->redisClient->get(self::CACHE_KEY);
+        $value = $this->redisClient->get(self::CACHE_KEY);
+
+        if (false === $value) {
+            return null;
+        }
+
+        return $value;
     }
 }
